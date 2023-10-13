@@ -1,3 +1,35 @@
+let continente = 'América';
+let país = 'Estados Unidos';
+let departamento = 'California';
+let ciudad = 'Los Angeles';
+let barrio = 'Hollywood';
+let dirección = '123 Main Street';
+
+console.log('Continente:', continente);
+console.log('País:', país);
+console.log('Departamento:', departamento);
+console.log('Ciudad:', ciudad);
+console.log('Barrio:', barrio);
+console.log('Dirección:', dirección);
+
+let esTercerMundista = false;
+let idioma;
+
+console.log('esTercerMundista:', esTercerMundista);
+console.log('Continente:', continente);
+console.log('País:', país);
+console.log('Idioma:', idioma);
+
+idioma = 'Inglés';
+
+//const continente = 'América';
+//const país = 'Estados Unidos';
+
+console.log('Continente (constante):', continente);
+console.log('País (constante):', país);
+
+
+
 let finlandia = 6000000
 let pais = "colombia";
 let promedio= 33000000

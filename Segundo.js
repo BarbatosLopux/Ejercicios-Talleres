@@ -144,3 +144,65 @@
 //let areaT = baseT * alturaT/2
 
 //console.log("El area del triangulo es:", areaT);
+
+
+//Ejercicio 9 
+
+const totalAtletas = prompt("Ingrese la cantidad de atletas finalistas:");
+let campeonaNombre;
+let campeonaSalto = 0;
+
+for (let i = 1; i <= totalAtletas; i++) {
+  const nombre = prompt(`Ingrese el nombre de la atleta ${i}:`);
+  const marcaSalto = parseFloat(prompt(`Ingrese la marca de salto (en metros) de ${nombre}:`));
+
+  if (marcaSalto > campeonaSalto) {
+    campeonaNombre = nombre;
+    campeonaSalto = marcaSalto;
+  }
+}
+
+console.log(`La atleta campeona es ${campeonaNombre} con un salto de ${campeonaSalto} metros.`);
+
+if (campeonaSalto > 15.5) {
+  console.log("¡Récord roto! La atleta recibirá un premio de 500 millones.");
+} else {
+  console.log("La atleta no rompió el récord.");
+}
+
+//Ejercicio 10
+
+let suma = 0;
+let cantidadValores = 0;
+let mayorValor = Number.NEGATIVE_INFINITY;
+let menorValor = Number.POSITIVE_INFINITY;
+
+while (true) {
+  const entrada = parseFloat(prompt("Ingrese un número (ingrese 0 para detenerse):"));
+
+  if (entrada === 0) {
+    break; // El usuario ingresó 0, salimos del bucle
+  }
+
+  suma += entrada;
+  cantidadValores++;
+
+  if (entrada > mayorValor) {
+    mayorValor = entrada;
+  }
+
+  if (entrada < menorValor) {
+    menorValor = entrada;
+  }
+}
+
+if (cantidadValores === 0) {
+  console.log("No se ingresaron valores.");
+} else {
+  const promedio = suma / cantidadValores;
+  console.log(`SUMA DE VALORES: ${suma}`);
+  console.log(`VALOR DEL PROMEDIO: ${promedio}`);
+  console.log(`CANTIDAD DE VALORES DIGITADOS: ${cantidadValores}`);
+  console.log(`MAYOR VALOR: ${mayorValor}`);
+  console.log(`MENOR VALOR: ${menorValor}`);
+}
